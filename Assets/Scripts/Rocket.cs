@@ -8,12 +8,10 @@ public class Rocket : MonoBehaviour
 {
     Rigidbody rocketRigidBody;
     AudioSource rocketAudio;
-    [SerializeField] private float speed=100f;
-    [SerializeField] private float rotationspeed = 250;
+    [SerializeField] private float speed=20f;
+    [SerializeField] private float rotationspeed = 120f;
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip deathClip;
-
-
 
     public enum State
     {
@@ -22,7 +20,9 @@ public class Rocket : MonoBehaviour
         TRANSCENDING,
     }
     State state = State.ALIVE;
-    
+
+
+
     void Start()
     {
 
@@ -36,9 +36,14 @@ public class Rocket : MonoBehaviour
     void Update()
     {
 
+
+        if (state == State.ALIVE)
+        {
+            Thrust();
+            Rotate();
+        }
+
         
-        Thrust();
-        Rotate();
 
     }
 
@@ -56,8 +61,7 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(Vector3.back * rotationspeed * Time.deltaTime);
         }
-        if (!Input.GetKey(KeyCode.Space))
-            rocketAudio.Stop();
+        
 
         rocketRigidBody.freezeRotation = false;
     }
@@ -66,18 +70,26 @@ public class Rocket : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rocketRigidBody.AddRelativeForce(Vector3.up * speed * Time.deltaTime,ForceMode.Impulse);
+            rocketRigidBody.AddRelativeForce(Vector3.up * speed * Time.deltaTime, ForceMode.Impulse);
             if (!rocketAudio.isPlaying)
                 rocketAudio.PlayOneShot(mainEngine);
+            
+
+
         }
+        else
+        {
+            //(!Input.GetKey(KeyCode.Space))
+            rocketAudio.Stop();
+        }
+
     }
-    public void PlayDeathAudio()
-    {
-        
-        rocketAudio.PlayOneShot(deathClip);
-        Debug.Log("playing");
-    }
-    private void OnCollisionEnter(Collision collision)
+
+
+   
+
+
+     void OnCollisionEnter(Collision collision)
     {
         switch (collision.gameObject.tag)
         {
@@ -99,9 +111,12 @@ public class Rocket : MonoBehaviour
                 break;
         }
     }
-    
-
-
+     public void PlayDeathAudio()
+    {
+        rocketAudio.Stop();
+        rocketAudio.PlayOneShot(deathClip);
+        Debug.Log("playing");
+    }
     private void NextScene()
     {
         SceneManager.LoadScene(0);
