@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: c91a013f3fbf68f489324715102d0d17
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: detail_windowDoor_25
+    100002: detail_windowDoor_26
+    100004: detail_windowDoor_27
+    100006: detail_windowDoor_29
+    100008: engine_airplane%_2
+    100010: engine_intake_24
+    100012: glass_round_17
+    100014: landing_float%_18
+    100016: landing_float%_19
+    100018: //RootNode
+    100020: plane_elevator_20
+    100022: plane_elevator_21
+    100024: ship_cargoOpen_22
+    100026: ship_frontSquare_23
+    400000: detail_windowDoor_25
+    400002: detail_windowDoor_26
+    400004: detail_windowDoor_27
+    400006: detail_windowDoor_29
+    400008: engine_airplane%_2
+    400010: engine_intake_24
+    400012: glass_round_17
+    400014: landing_float%_18
+    400016: landing_float%_19
+    400018: //RootNode
+    400020: plane_elevator_20
+    400022: plane_elevator_21
+    400024: ship_cargoOpen_22
+    400026: ship_frontSquare_23
+    2100000: black
+    2100002: customMaterial5
+    2100004: glass
+    2100006: blueSteel
+    2100008: _defaultMat
+    2300000: detail_windowDoor_25
+    2300002: detail_windowDoor_26
+    2300004: detail_windowDoor_27
+    2300006: detail_windowDoor_29
+    2300008: engine_airplane%_2
+    2300010: engine_intake_24
+    2300012: glass_round_17
+    2300014: landing_float%_18
+    2300016: landing_float%_19
+    2300018: plane_elevator_20
+    2300020: plane_elevator_21
+    2300022: ship_cargoOpen_22
+    2300024: ship_frontSquare_23
+    3300000: detail_windowDoor_25
+    3300002: detail_windowDoor_26
+    3300004: detail_windowDoor_27
+    3300006: detail_windowDoor_29
+    3300008: engine_airplane%_2
+    3300010: engine_intake_24
+    3300012: glass_round_17
+    3300014: landing_float%_18
+    3300016: landing_float%_19
+    3300018: plane_elevator_20
+    3300020: plane_elevator_21
+    3300022: ship_cargoOpen_22
+    3300024: ship_frontSquare_23
+    4300000: engine_airplane%_2
+    4300002: glass_round_17
+    4300004: landing_float%_18
+    4300006: landing_float%_19
+    4300008: plane_elevator_20
+    4300010: plane_elevator_21
+    4300012: ship_cargoOpen_22
+    4300014: ship_frontSquare_23
+    4300016: engine_intake_24
+    4300018: detail_windowDoor_25
+    4300020: detail_windowDoor_26
+    4300022: detail_windowDoor_27
+    4300024: detail_windowDoor_29
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,7 +10,7 @@ public class Rocket : MonoBehaviour
     AudioSource rocketAudio;
     [SerializeField] private float speed=20f;
     [SerializeField] private float rotationspeed = 120f;
-    [SerializeField] AudioClip mainEngine, deathClip;
+    [SerializeField] AudioClip mainEngine, deathClip, successClip;
     [SerializeField] ParticleSystem engineParticle, successParticle, deathParticle;
 
     public enum State  { ALIVE, DYING, TRANSCENDING, }
@@ -46,7 +46,8 @@ public class Rocket : MonoBehaviour
 
     private void Rotate()
     {
-        rocketRigidBody.freezeRotation = true;
+        //rocketRigidBody.freezeRotation = true;
+        rocketRigidBody.angularVelocity = Vector3.zero;//zero rotation due to physics engine
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.forward * rotationspeed * Time.deltaTime);
@@ -92,20 +93,24 @@ public class Rocket : MonoBehaviour
         {
             case "Friendly":
                 state = State.ALIVE;
+                engineParticle.Stop();
                 break;
 
             case "Finish":
                 state = State.TRANSCENDING;
+                engineParticle.Stop();
                 successParticle.Play();
+                PlayAudio(successClip);
                 Invoke("NextScene", 3f);
                 break;
 
             case "Death":
-                PlayDeathAudio();
-                deathParticle.Play();
-                engineParticle.Stop();
                 state = State.DYING;
-               
+                PlayAudio(deathClip);
+                engineParticle.Stop();
+                deathParticle.Play();                               
+                Invoke("NextScene", 3f);
+
 
                 break;
             default:
@@ -118,10 +123,10 @@ public class Rocket : MonoBehaviour
 
 
 
-    public void PlayDeathAudio()
+    public void PlayAudio(AudioClip a )
     {
         rocketAudio.Stop();
-        rocketAudio.PlayOneShot(deathClip);
+        rocketAudio.PlayOneShot(a);
         Debug.Log("Dead");
     }
 
